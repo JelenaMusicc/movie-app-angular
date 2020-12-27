@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+  integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+<ul class="menu-bar">
+  <li>
+    <a><i class="fas fa-film fa-lg"></i></a>
+  </li>
+  <li (click)="getTopRatedMovies()" routerLink="/movies"><a>Movies</a></li>
+  <li (click)="getTopRatedShows()" routerLink="/shows"><a>TV Shows</a></li>
+</ul>
+<div>
+  <form (ngSubmit)="onSearchClick()">
+    <input class="search-bar" name="search" [(ngModel)]="searchInput" type="text" placeholder="Type any movie name"
+      aria-label="Search">
+    <button class="search-btn"><i class="fa fa-search"></i></button>
+  </form>
+</div>

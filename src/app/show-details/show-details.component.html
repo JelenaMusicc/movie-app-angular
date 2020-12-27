@@ -1,0 +1,12 @@
+
+<div class="container-details mt-50">
+  <div *ngIf="showDetail" class="block-details" >
+    <img src="https://image.tmdb.org/t/p/w500/{{ showDetail.poster_path }}" />
+    <h1 class="color-white">{{ showDetail?.name }}</h1>
+    <p class="color-white">{{ showDetail?.overview }}</p>
+    <p class="color-white">Date: {{ showDetail.first_air_date}}</p>
+    <span class="color-white">{{ showDetail.vote_average}}
+      <i class="fas fa-star"></i>
+    </span>
+  </div>
+</div>

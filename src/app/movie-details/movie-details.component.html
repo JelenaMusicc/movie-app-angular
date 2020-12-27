@@ -1,0 +1,16 @@
+<div class="container-details">
+  <div *ngIf="movieDetail">
+    <h1 class="color-white">{{ movieDetail?.title }}</h1>
+    <div class="block-details">
+      <img src="https://image.tmdb.org/t/p/w500/{{ movieDetail.poster_path }}" />
+      <div class="youtube-frame">
+        <iframe width="800" height="420" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="color-white mt-50 font-20">Description: {{ movieDetail?.overview }}</p>
+      <p class="color-blue">Date: {{ movieDetail?.release_date}}</p>
+      <span class="color-white">{{ movieDetail?.vote_average}}
+        <i class="fas fa-star"></i>
+      </span>
+    </div>
+  </div>
+</div>

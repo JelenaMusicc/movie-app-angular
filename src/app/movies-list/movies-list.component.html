@@ -1,0 +1,10 @@
+<div *ngIf="movieList.length" class="container">
+  <div *ngFor="let movie of movieList" class="block" routerLink="/movie-details/{{movie.id}}"
+    (click)="getMovieDetails(movie.id)">
+    <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" />
+    <p class="color-white">{{movie.title}}</p>
+    <span class="color-white float-right pb-4 pr-5 fa-sm">{{ movie.vote_average}}
+      <i class="fas fa-star"></i>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="!isLoadingMovies">
+    <div class="block" *ngFor="let movie of discoverMovies?.results">
+      <a routerLink="/movie-details/{{movie.id}}">
+        <img class="img-responsive" src="http://image.tmdb.org/t/p/w300/{{movie?.poster_path}}" alt="">
+        <div class="color-white">
+          {{movie?.title}}
+        </div>
+        <span class="color-white float-right pb-4 pr-5 fa-sm">{{ movie.vote_average}}
+          <i class="fas fa-star"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
